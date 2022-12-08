@@ -1,0 +1,16 @@
+<p>Product title: {{ product.title }}</p>
+<p>Product id: {{ product.id }}</p>
+<img [src]="product.image" [alt]="product.title" />
+<p>Price: <b>{{ product.price | currency:"RUB" }}</b></p>
+
+<button (click)="showingDetails = !showingDetails">{{showingDetails ? 'Hide':'Show'}} details</button>
+
+<div *ngIf="showingDetails">
+  <p>{{product.description}}</p>
+  <p>
+    Product rating:
+    <span [ngStyle]="{fontWeight: 'bold'}">
+      {{product.rating.rate | number:'1.2-4'}}
+    </span>
+  </p>
+</div>
