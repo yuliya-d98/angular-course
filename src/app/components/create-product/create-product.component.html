@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input
+    type="text"
+    formControlName="title"
+    placeholder="Product name"
+    appFocus
+  />
+  <p *ngIf="title.errors?.minlength && title.touched">
+    Your title should be min {{title.errors?.minlength.requiredLength}} symbols. Now it's {{title.errors?.minlength.actualLength}}
+  </p>
+  <button type="submit">Create product</button>
+</form>

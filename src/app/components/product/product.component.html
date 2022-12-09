@@ -10,7 +10,7 @@
   <p>
     Product rating:
     <span [ngStyle]="{fontWeight: 'bold'}">
-      {{product.rating.rate | number:'1.2-4'}}
+      {{product.rating.rate || 0 | number:'1.2-4'}}
     </span>
   </p>
 </div>

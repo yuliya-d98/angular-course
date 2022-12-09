@@ -1,0 +1,13 @@
+<app-global-error></app-global-error>
+<h1>{{ title | titlecase }}</h1>
+<input
+  type="text"
+  placeholder="Filter products ... "
+  [(ngModel)]="term"
+/>
+<p *ngIf="loading">Loading ...</p>
+<app-product *ngFor="let product of productsService.products | filterProducts:term " [product]="product"></app-product>
+<app-modal *ngIf="modalService.isVisible$ | async" title="Create new Product">
+  <app-create-product></app-create-product>
+</app-modal>
+<button (click)="modalService.open()">+</button>

@@ -1,0 +1,6 @@
+<div class="background" (click)="modalService.close()"></div>
+<div class="modal">
+  <h2>{{title | titlecase}}</h2>
+  <button (click)="modalService.close()">&times;</button>
+  <ng-content></ng-content>
+</div>
