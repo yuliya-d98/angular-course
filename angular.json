@@ -20,6 +20,7 @@
             "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "deployUrl": "/angular-course",
             "polyfills": [
               "zone.js"
             ],
