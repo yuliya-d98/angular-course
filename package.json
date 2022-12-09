@@ -1,5 +1,6 @@
 {
   "name": "angular-course",
+  "homepage": "https://yuliya-d98.github.io/angular-course",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
